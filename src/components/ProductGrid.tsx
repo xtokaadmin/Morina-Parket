@@ -100,7 +100,7 @@ const defaultProducts: Product[] = [
     category: "Parkett",
     description: "Premium Eichenparkett mit natürlicher Oberfläche",
     imageUrl:
-      "/src/assets/Morina-Parkett-Klosbachstrasse-3-1440px-1200x800.jpg",
+      "./src/assets/Morina-Parkett-Klosbachstrasse-3-1440px-1200x800.jpg",
   },
   {
     id: "2",
@@ -108,35 +108,35 @@ const defaultProducts: Product[] = [
     category: "Parkett",
     description: "Elegantes Nussbaumparkett mit reichen, dunklen Tönen",
     imageUrl:
-      "/src/assets/Morina-Parkett-Schulhausstrasse-2-1440px-768x1152.jpg",
+      "./src/assets/Morina-Parkett-Schulhausstrasse-2-1440px-768x1152.jpg",
   },
   {
     id: "3",
     name: "Wollteppich",
     category: "Teppich",
     description: "Weicher Wollteppich für maximalen Komfort",
-    imageUrl: "/src/assets/MorinaParkett_Showroom2017_07_MidRes-768x444.jpeg",
+    imageUrl: "./src/assets/MorinaParkett_Showroom2017_07_MidRes-768x444.jpeg",
   },
   {
     id: "4",
     name: "Natürliches Linoleum",
     category: "Linoleum",
     description: "Umweltfreundlicher Linoleumboden in neutralen Tönen",
-    imageUrl: "/src/assets/MorinaParkett_Showroom2017_08_MidRes-1349x800.jpeg",
+    imageUrl: "./src/assets/MorinaParkett_Showroom2017_08_MidRes-1349x800.jpeg",
   },
   {
     id: "5",
     name: "Luxus Vinyl",
     category: "Vinyl",
     description: "Wasserfester Vinylboden mit holzähnlichem Aussehen",
-    imageUrl: "/src/assets/MorinaParkett_Showroom2017_11_MidRes-1349x800.jpeg",
+    imageUrl: "./src/assets/MorinaParkett_Showroom2017_11_MidRes-1349x800.jpeg",
   },
   {
     id: "6",
     name: "Korkboden",
     category: "Kork",
     description: "Nachhaltiger Korkboden mit natürlicher Isolierung",
-    imageUrl: "/src/assets/MorinaParkett_Showroom2017_12_LowRes-768x512.jpg",
+    imageUrl: "./src/assets/MorinaParkett_Showroom2017_12_LowRes-768x512.jpg",
   },
   {
     id: "7",
@@ -144,14 +144,14 @@ const defaultProducts: Product[] = [
     category: "Terrasse",
     description: "Witterungsbeständige Holzdielen für Außenbereiche",
     imageUrl:
-      "/src/assets/Morina-Parkett-In-der-Waesseri-1-1-1440px-768x512.jpg",
+      "./src/assets/Morina-Parkett-In-der-Waesseri-1-1-1440px-768x512.jpg",
   },
   {
     id: "8",
     name: "Designer Teppich",
     category: "Teppich",
     description: "Zeitgenössischer gemusterter Teppich für moderne Innenräume",
-    imageUrl: "/src/assets/showroom-768x456.jpeg",
+    imageUrl: "./src/assets/showroom-768x456.jpeg",
   },
 ];
 
