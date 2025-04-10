@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import CartIcon from "./CartIcon";
-import logoImage from "@/assets/logos/logo.svg";
+import CartIcon from "@/features/cart/components/CartIcon";
+import { logos } from "@/assets";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img
-              src={logoImage}
+              src={logos.main}
               alt="Morina Parkett GmbH Logo"
               className="h-10 md:h-12 transition-transform duration-300 hover:scale-105"
             />
@@ -182,4 +182,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header; 

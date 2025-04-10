@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
-import ImageWithFallback from "./ImageWithFallback";
+
 
 interface HeroProps {
   title: string;
@@ -33,8 +33,8 @@ const Hero = ({
   const imageOrder = reversed ? "md:order-1" : "";
 
   return (
-    <section className="relative bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+    <section className="relative bg-white h-[70vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
         <div
           className={`${bgColor} p-8 md:p-16 flex flex-col justify-center ${contentOrder}`}
           style={{ backgroundColor: bgColor }}
@@ -89,12 +89,16 @@ const Hero = ({
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
-          className={`aspect-square overflow-hidden ${imageOrder}`}
+          className={`overflow-hidden h-full ${imageOrder}`}
         >
-          <ImageWithFallback
+          <img
             src={imageSrc}
             alt={imageAlt}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80";
+            }}
           />
         </motion.div>
       </div>

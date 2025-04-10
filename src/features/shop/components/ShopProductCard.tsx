@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Check } from "lucide-react";
-import { useCartStore } from "@/store/cartStore";
+import { useCartStore } from "@/features/cart/store/cartStore";
 import { toast } from "@/components/ui/use-toast";
 
 // Import product images directly
@@ -75,9 +75,9 @@ const ShopProductCard = ({
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 h-full flex flex-col">
       <div className="relative">
         <AspectRatio ratio={1 / 1}>
-          <img
-            src={displayImage}
-            alt={name}
+          <img 
+            src={displayImage} 
+            alt={name} 
             className="object-cover w-full h-full"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
@@ -120,4 +120,4 @@ const ShopProductCard = ({
   );
 };
 
-export default ShopProductCard;
+export default ShopProductCard; 

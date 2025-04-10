@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
-import { logos } from "../assets";
+import logoImage from "@/assets/logos/logo.svg";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img
-              src={logos.main}
+              src={logoImage}
               alt="Morina Parkett GmbH Logo"
               className="h-12 mb-4"
             />
@@ -165,4 +165,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer; 
