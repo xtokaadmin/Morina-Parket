@@ -13,7 +13,7 @@ const ServicesPage = () => {
       <Hero
         title="Unsere Dienstleistungen"
         description="Professionelle Bodenbelagsdienstleistungen, maßgeschneidert für Ihre Bedürfnisse. Wir bieten Ihnen Qualität und Expertise für jeden Bodenbelag."
-        imageSrc="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80"
+        imageSrc="/assets/Morina-Parkett-In-der-Waesseri-1-1-1440px-768x512.jpg"
         imageAlt="Professionelle Bodenverlegung"
         primaryButtonText="Beratung anfragen"
         primaryButtonLink="/contact"

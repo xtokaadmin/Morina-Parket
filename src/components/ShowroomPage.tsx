@@ -16,7 +16,7 @@ const ShowroomPage = () => {
       <Hero
         title="Unser Showroom"
         description="Besuchen Sie unseren Showroom und erleben Sie unsere Bodenbelagslösungen hautnah. Lassen Sie sich von der Vielfalt und Qualität inspirieren."
-        imageSrc="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=1200&q=80"
+        imageSrc="/assets/MorinaParkett_Showroom2017_07_MidRes-768x444.jpeg"
         imageAlt="Morina Parkett Showroom"
         primaryButtonText="Termin vereinbaren"
         primaryButtonLink="/contact"
@@ -37,7 +37,7 @@ const ShowroomPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="aspect-square overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80"
+                src="/assets/showroom-768x456.jpeg"
                 alt="Morina Parkett Showroom"
                 className="w-full h-full object-cover"
               />

@@ -79,7 +79,7 @@ const ShopPage = () => {
       <Hero
         title="Pflegeprodukte Shop"
         description="Entdecken Sie unsere hochwertigen Pflegeprodukte für Ihre Bodenbeläge. Qualität von WOCA und clean & green."
-        imageSrc="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1200&q=80"
+        imageSrc="/assets/woca-pflegeoel-247x296.png"
         imageAlt="Morina Parkett Pflegeprodukte"
         primaryButtonText="Alle Produkte"
         primaryButtonLink="#products"

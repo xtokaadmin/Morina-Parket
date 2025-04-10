@@ -13,7 +13,7 @@ const ContactPage = () => {
       <Hero
         title="Kontaktieren Sie uns"
         description="Wir sind für Sie da. Nehmen Sie Kontakt mit unserem Team auf für Anfragen oder um einen Termin zu vereinbaren."
-        imageSrc="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=80"
+        imageSrc="/assets/MorinaParkett_Showroom2017_12_LowRes-768x512.jpg"
         imageAlt="Kontakt Morina Parkett"
         bgColor="#f8f8f8"
       />

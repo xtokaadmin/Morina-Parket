@@ -16,7 +16,7 @@ const ProductsPage = () => {
       <Hero
         title="Produkte"
         description="Entdecken Sie unsere Qualitätsprodukte für Ihr Zuhause oder Geschäft."
-        imageSrc="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1200&q=80"
+        imageSrc="/assets/Parkett4-1200x800.jpg"
         imageAlt="Premium Produkte"
         primaryButtonText="Kontakt aufnehmen"
         primaryButtonLink="/contact"

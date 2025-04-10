@@ -18,7 +18,7 @@ const ProductCard = ({
   name = "Premium Oak Parquet",
   category = "Parkett",
   description = "High-quality oak parquet flooring with natural finish, perfect for modern interiors.",
-  imageUrl = "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80",
+  imageUrl = "/assets/parkett-1154x800.jpg",
   onClick = () => console.log("Product card clicked"),
 }: ProductCardProps) => {
   return (
