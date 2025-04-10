@@ -1,3 +1,13 @@
+import {
+  wocaPflegeoel,
+  wocaHolzbodenseifePHNeutral,
+  wocaHolzbodenseifeSpray,
+  wocaIntensivreiniger,
+  wocaFleckenentferner,
+  cleanGreenNatural,
+  cleanGreenActive,
+} from "@/assets";
+
 export interface Product {
   id: string;
   name: string;
@@ -8,162 +18,78 @@ export interface Product {
   inStock: boolean;
 }
 
-export const careProducts: Product[] = [
+export const wocaCareProducts: Product[] = [
   {
-    id: "care-1",
-    name: "Parkett Reiniger",
-    category: "Pflegeprodukte",
-    description: "Schonender Reiniger für versiegelte und geölte Parkettböden.",
-    imageUrl: "/assets/clean_green_natural-1-247x296.jpg",
-    price: 19.9,
-    inStock: true,
-  },
-  {
-    id: "care-2",
-    name: "Parkett Pflege",
-    category: "Pflegeprodukte",
-    description:
-      "Pflegemittel für versiegelte Parkettböden, verleiht neuen Glanz.",
-    imageUrl: "/assets/clean_green_active_407634-1-247x296.jpg",
-    price: 24.9,
-    inStock: true,
-  },
-  {
-    id: "care-3",
-    name: "Parkett Öl",
-    category: "Pflegeprodukte",
+    id: "woca-1",
+    name: "WOCA Pflegeöl",
+    category: "Parkettpflege",
     description:
       "Hochwertiges Öl zur Pflege und Auffrischung geölter Parkettböden.",
-    imageUrl: "/assets/woca-pflegeoel-247x296.png",
-    price: 29.9,
+    imageUrl: wocaPflegeoel,
+    price: 43.0,
     inStock: true,
   },
   {
-    id: "care-4",
-    name: "Teppich Reiniger",
-    category: "Pflegeprodukte",
+    id: "woca-2",
+    name: "WOCA Holzbodenseife ph-Neutral",
+    category: "Parkettpflege",
     description:
-      "Effektiver Reiniger für alle Arten von Teppichen und Teppichböden.",
-    imageUrl: "/assets/woca-holzbodenseife-ph-neutral-247x296.png",
-    price: 18.9,
+      "Schonende Reinigung für alle Holzböden mit neutralem pH-Wert.",
+    imageUrl: wocaHolzbodenseifePHNeutral,
+    price: 29.0,
     inStock: true,
   },
   {
-    id: "care-5",
-    name: "Fleckenentferner",
-    category: "Pflegeprodukte",
+    id: "woca-3",
+    name: "WOCA Holzbodenseife in Sprühflasche",
+    category: "Parkettpflege",
     description:
-      "Spezialmittel zur Entfernung hartnäckiger Flecken auf allen Bodenbelägen.",
-    imageUrl: "/assets/woca-holzbodenseife-spray-natur-247x296.png",
-    price: 15.9,
+      "Praktische Sprühflasche für einfache Anwendung der Holzbodenseife.",
+    imageUrl: wocaHolzbodenseifeSpray,
+    price: 32.0,
     inStock: true,
   },
   {
-    id: "care-6",
-    name: "Korkboden Pflege",
-    category: "Pflegeprodukte",
-    description:
-      "Spezielle Pflege für Korkböden, schützt und erhält die natürliche Schönheit.",
-    imageUrl: "/assets/woca-intensivreiniger-247x296.png",
-    price: 22.9,
+    id: "woca-4",
+    name: "WOCA Intensivreiniger",
+    category: "Woca Parkett- & Intensivreiniger",
+    description: "Kraftvoller Reiniger für stark verschmutzte Holzböden.",
+    imageUrl: wocaIntensivreiniger,
+    price: 39.0,
     inStock: true,
   },
   {
-    id: "care-7",
-    name: "Vinyl Reiniger",
-    category: "Pflegeprodukte",
-    description: "Speziell entwickelter Reiniger für Vinyl- und PVC-Böden.",
-    imageUrl: "/assets/woca-fleckenentferner-247x296.jpg",
-    price: 17.9,
+    id: "woca-5",
+    name: "WOCA Fleckenentferner-Spray",
+    category: "Woca Parkett- & Intensivreiniger",
+    description: "Effektiver Fleckenentferner für hartnäckige Verschmutzungen.",
+    imageUrl: wocaFleckenentferner,
+    price: 38.0,
     inStock: true,
   },
   {
-    id: "care-8",
-    name: "Pflegeset Komplett",
-    category: "Pflegeprodukte",
-    description:
-      "Komplettes Set mit Reiniger, Pflege und Zubehör für alle Bodenarten.",
-    imageUrl: "/assets/clean_green_active_407634-1-247x296.jpg",
-    price: 49.9,
+    id: "clean-green-1",
+    name: "clean & green Parkettreiniger natural",
+    category: "Parkett- & Intensivreiniger",
+    description: "Umweltfreundlicher Reiniger für versiegelte Parkettböden.",
+    imageUrl: cleanGreenNatural,
+    price: 14.0,
+    inStock: true,
+  },
+  {
+    id: "clean-green-2",
+    name: "clean & green Intensivreiniger active",
+    category: "Parkett- & Intensivreiniger",
+    description: "Kraftvoller Intensivreiniger für stark beanspruchte Böden.",
+    imageUrl: cleanGreenActive,
+    price: 14.0,
     inStock: true,
   },
 ];
 
-// Original flooring products
-export const flooringProducts: Product[] = [
-  {
-    id: "1",
-    name: "Eichen Parkett",
-    category: "Parkett",
-    description: "Premium Eichenparkett mit natürlicher Oberfläche",
-    imageUrl: "/assets/parkett-1154x800.jpg",
-    price: 89.9,
-    inStock: true,
-  },
-  {
-    id: "2",
-    name: "Nussbaum Parkett",
-    category: "Parkett",
-    description: "Elegantes Nussbaumparkett mit reichen, dunklen Tönen",
-    imageUrl: "/assets/Parkett4-1200x800.jpg",
-    price: 99.9,
-    inStock: true,
-  },
-  {
-    id: "3",
-    name: "Wollteppich",
-    category: "Teppich",
-    description: "Weicher Wollteppich für maximalen Komfort",
-    imageUrl: "/assets/Teppichboden-1400x525.jpg",
-    price: 129.9,
-    inStock: true,
-  },
-  {
-    id: "4",
-    name: "Natürliches Linoleum",
-    category: "Linoleum",
-    description: "Umweltfreundlicher Linoleumboden in neutralen Tönen",
-    imageUrl: "/assets/linoleum.jpg",
-    price: 69.9,
-    inStock: true,
-  },
-  {
-    id: "5",
-    name: "Luxus Vinyl",
-    category: "Vinyl",
-    description: "Wasserfester Vinylboden mit holzähnlichem Aussehen",
-    imageUrl: "/assets/Vinyl-.jpg",
-    price: 59.9,
-    inStock: true,
-  },
-  {
-    id: "6",
-    name: "Korkboden",
-    category: "Kork",
-    description: "Nachhaltiger Korkboden mit natürlicher Isolierung",
-    imageUrl: "/assets/Kork.jpg",
-    price: 79.9,
-    inStock: true,
-  },
-  {
-    id: "7",
-    name: "Terrassendielen",
-    category: "Terrasse",
-    description: "Witterungsbeständige Holzdielen für Außenbereiche",
-    imageUrl: "/assets/terassenbo.jpg",
-    price: 109.9,
-    inStock: true,
-  },
-  {
-    id: "8",
-    name: "Designer Teppich",
-    category: "Teppich",
-    description: "Zeitgenössischer gemusterter Teppich für moderne Innenräume",
-    imageUrl: "/assets/showroom-768x456.jpeg",
-    price: 149.9,
-    inStock: true,
-  },
-];
+// For backward compatibility, keeping these arrays but they won't be used in the shop
+export const careProducts: Product[] = [];
+export const flooringProducts: Product[] = [];
 
-// Combined products for the shop
-export const allProducts = [...flooringProducts, ...careProducts];
+// Only use wocaCareProducts for the shop
+export const allProducts = wocaCareProducts;

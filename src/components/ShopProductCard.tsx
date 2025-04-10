@@ -7,6 +7,15 @@ import { ShoppingCart, Check } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 import { toast } from "@/components/ui/use-toast";
 import ImageWithFallback from "./ImageWithFallback";
+import {
+  wocaPflegeoel,
+  wocaHolzbodenseifePHNeutral,
+  wocaHolzbodenseifeSpray,
+  wocaIntensivreiniger,
+  wocaFleckenentferner,
+  cleanGreenNatural,
+  cleanGreenActive,
+} from "@/assets";
 
 interface ShopProductCardProps {
   id: string;
@@ -17,6 +26,23 @@ interface ShopProductCardProps {
   price: number;
   inStock?: boolean;
 }
+
+// Helper function to get the correct image source
+const getImageSource = (imageUrl: string) => {
+  const imageMap: Record<string, string> = {
+    "../assets/woca-pflegeoel-247x296.png": wocaPflegeoel,
+    "../assets/woca-holzbodenseife-ph-neutral-247x296.png":
+      wocaHolzbodenseifePHNeutral,
+    "../assets/woca-holzbodenseife-spray-natur-247x296.png":
+      wocaHolzbodenseifeSpray,
+    "../assets/woca-intensivreiniger-247x296.png": wocaIntensivreiniger,
+    "../assets/woca-fleckenentferner-247x296.jpg": wocaFleckenentferner,
+    "../assets/clean_green_natural-1-247x296.jpg": cleanGreenNatural,
+    "../assets/clean_green_active_407634-1-247x296.jpg": cleanGreenActive,
+  };
+
+  return imageMap[imageUrl] || imageUrl;
+};
 
 const ShopProductCard = ({
   id,
@@ -34,7 +60,7 @@ const ShopProductCard = ({
       id,
       name,
       price,
-      imageUrl,
+      imageUrl: getImageSource(imageUrl),
       category,
     });
 
@@ -49,7 +75,7 @@ const ShopProductCard = ({
       <div className="relative">
         <AspectRatio ratio={1 / 1}>
           <ImageWithFallback
-            src={imageUrl}
+            src={getImageSource(imageUrl)}
             alt={name}
             className="object-cover w-full h-full"
           />

@@ -1,12 +1,13 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import { Link } from "react-router-dom";
-import ImageWithFallback from "./ImageWithFallback";
+import ProductGrid from "./ProductGrid";
+import { flooringProducts } from "@/data/products";
 
 const ProductsPage = () => {
   return (
@@ -14,10 +15,10 @@ const ProductsPage = () => {
       <Header />
       {/* Hero Section */}
       <Hero
-        title="Produkte"
-        description="Entdecken Sie unsere Qualitätsprodukte für Ihr Zuhause oder Geschäft."
+        title="Sortiment"
+        description="Entdecken Sie unsere vielfältige Auswahl an hochwertigen Bodenbelägen für jeden Raum und Stil."
         imageSrc="/assets/Parkett4-1200x800.jpg"
-        imageAlt="Premium Produkte"
+        imageAlt="Premium Bodenbeläge"
         primaryButtonText="Kontakt aufnehmen"
         primaryButtonLink="/contact"
         bgColor="#f8f8f8"
@@ -27,246 +28,217 @@ const ProductsPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Unsere Produkte</h2>
+            <h2 className="text-3xl font-bold mb-4">Unsere Bodenbeläge</h2>
             <Separator className="mx-auto w-24 bg-[#5ec5ec] h-1 mb-6" />
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Entdecken Sie unsere hochwertigen Produkte für Ihre individuellen
-              Bedürfnisse.
+              Wir bieten eine breite Palette an Bodenbelägen für jeden Bedarf
+              und Geschmack. Von klassischem Parkett bis zu modernem Vinyl - bei
+              uns finden Sie hochwertige Produkte für Ihr Zuhause oder Geschäft.
+            </p>
+          </div>
+
+          <ProductGrid products={flooringProducts} />
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-20 bg-[#f8f8f8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Unsere Kategorien</h2>
+            <Separator className="mx-auto w-24 bg-[#5ec5ec] h-1 mb-6" />
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Entdecken Sie unsere verschiedenen Bodenbelagskategorien und
+              finden Sie die perfekte Lösung für Ihre Bedürfnisse.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Pflegeprodukte werden hier angezeigt */}
+            {/* Parkett */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/parkett-1154x800.jpg"
+                  alt="Parkett"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Parkett</h3>
+                <p className="text-gray-600 mb-4">
+                  Hochwertiges Parkett in verschiedenen Holzarten und
+                  Ausführungen für ein natürliches und elegantes Ambiente.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Teppich */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/Teppichboden-1400x525.jpg"
+                  alt="Teppich"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Teppich</h3>
+                <p className="text-gray-600 mb-4">
+                  Weiche und komfortable Teppichböden in verschiedenen Farben,
+                  Mustern und Materialien für ein gemütliches Wohngefühl.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Linoleum */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/linoleum.jpg"
+                  alt="Linoleum"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Linoleum</h3>
+                <p className="text-gray-600 mb-4">
+                  Umweltfreundlicher und langlebiger Linoleumboden in vielen
+                  Farbvarianten für Wohn- und Geschäftsräume.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Vinyl / PVC / CV */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/Vinyl-.jpg"
+                  alt="Vinyl / PVC / CV"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Vinyl / PVC / CV</h3>
+                <p className="text-gray-600 mb-4">
+                  Robuste und pflegeleichte Vinylböden in verschiedenen Designs,
+                  ideal für stark beanspruchte Bereiche und Feuchträume.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Kork */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/Kork.jpg"
+                  alt="Kork"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Kork</h3>
+                <p className="text-gray-600 mb-4">
+                  Natürlicher und wärmeisolierender Korkboden für ein angenehmes
+                  Raumklima und hohen Gehkomfort.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Terrassenboden */}
+            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
+              <div className="relative h-64">
+                <img
+                  src="/assets/terassenbo.jpg"
+                  alt="Terrassenboden"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Terrassenboden</h3>
+                <p className="text-gray-600 mb-4">
+                  Witterungsbeständige Terrassendielen aus Holz oder WPC für
+                  Ihren Außenbereich, langlebig und pflegeleicht.
+                </p>
+                <Button
+                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Beratung anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pflegeprodukte Section */}
-      <section className="py-20 bg-[#f8f8f8]">
+      {/* Raumgestaltung Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Pflegeprodukte</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Raumgestaltung</h2>
             <Separator className="mx-auto w-24 bg-[#5ec5ec] h-1 mb-6" />
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Unsere Pflegeprodukte von Woca für die optimale Pflege und
-              Reinigung Ihrer Bodenbeläge.
+            <p className="text-gray-600 mb-8">
+              Neben hochwertigen Bodenbelägen bieten wir auch umfassende
+              Raumgestaltungslösungen an. Unsere Experten helfen Ihnen, Ihre
+              Räume optimal zu gestalten und das Beste aus Ihren Wohn- oder
+              Geschäftsräumen herauszuholen.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Parkett- & Intensivreiniger - clean & green natural */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/clean_green_natural-1-247x296.jpg"
-                  alt="Parkett- & Intensivreiniger"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">
-                  Parkett- & Intensivreiniger
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  clean & green Parkettreiniger natural
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">14,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* Parkett- & Intensivreiniger - clean & green active */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/clean_green_active_407634-1-247x296.jpg"
-                  alt="Parkett- & Intensivreiniger"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">
-                  Parkett- & Intensivreiniger
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  clean & green Intensivreiniger active
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">14,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* WOCA Pflegeöl */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/woca-pflegeoel-247x296.png"
-                  alt="WOCA Pflegeöl"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Parkettpflege</h3>
-                <p className="text-gray-600 mb-4">WOCA Pflegeöl</p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">43,00 CHF – 84,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* WOCA Holzbodenseife */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/woca-holzbodenseife-ph-neutral-247x296.png"
-                  alt="WOCA Holzbodenseife"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Parkettpflege</h3>
-                <p className="text-gray-600 mb-4">
-                  WOCA Holzbodenseife ph-Neutral
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">29,00 CHF – 54,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* WOCA Holzbodenseife in Sprühflasche */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/woca-holzbodenseife-spray-natur-247x296.png"
-                  alt="WOCA Holzbodenseife in Sprühflasche"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Parkettpflege</h3>
-                <p className="text-gray-600 mb-4">
-                  WOCA Holzbodenseife in Sprühflasche
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">32,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* WOCA Fleckenentferner-Spray */}
-            <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
-              <div className="relative h-64">
-                <ImageWithFallback
-                  src="/assets/woca-fleckenentferner-247x296.jpg"
-                  alt="WOCA Fleckenentferner-Spray"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">
-                  Woca Parkett- & Intensivreiniger
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  WOCA Fleckenentferner-Spray
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-bold">38,00 CHF</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-gray-600 hover:text-[#5ec5ec]"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white w-full"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Bestellen <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
+            <Button
+              className="bg-[#5ec5ec] hover:bg-[#4db5dc] text-white"
+              asChild
+            >
+              <a
+                href="https://www.morina-parkett.ch/sortiment/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                Mehr zur Raumgestaltung{" "}
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
