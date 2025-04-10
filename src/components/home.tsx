@@ -32,14 +32,6 @@ const Home = () => {
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Unsere Dienstleistungen</h2>
-            <Separator className="mx-auto w-24 bg-[#5ec5ec] h-1 mb-6" />
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Wir bieten Ihnen professionelle Beratung, fachgerechte Verlegung
-              und langfristige Pflege für alle Arten von Bodenbelägen
-            </p>
-          </div>
           <ServicesSection />
         </div>
       </section>
