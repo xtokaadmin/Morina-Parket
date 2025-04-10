@@ -2,7 +2,6 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import ImageWithFallback from "@/components/ImageWithFallback";
 
 interface ProductCardProps {
   id?: string;
@@ -28,7 +27,7 @@ const ProductCard = ({
     >
       <div className="relative">
         <AspectRatio ratio={1 / 1}>
-          <ImageWithFallback
+          <img
             src={imageUrl}
             alt={name}
             className="object-cover w-full h-full"

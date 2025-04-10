@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
-
 interface HeroProps {
   title: string;
   description: string;
@@ -106,4 +105,4 @@ const Hero = ({
   );
 };
 
-export default Hero;
+export default Hero; 
