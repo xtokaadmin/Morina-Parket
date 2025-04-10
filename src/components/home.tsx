@@ -20,7 +20,7 @@ const Home = () => {
       <Hero
         title="Ihr Spezialist für Bodenbeläge"
         description="Seit über 20 Jahren bieten wir Ihnen hochwertige Bodenbeläge und professionelle Verlegung. Wir beraten Sie gerne in unserem Showroom in Zürich."
-        imageSrc="./src/assets/Parkett4-1200x800.jpg"
+        imageSrc="/assets/Parkett4-1200x800.jpg"
         imageAlt="Morina Parkett - Qualitätsböden"
         primaryButtonText="Sortiment entdecken"
         primaryButtonLink="/sortiment"

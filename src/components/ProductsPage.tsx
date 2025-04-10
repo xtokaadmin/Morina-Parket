@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import { Link } from "react-router-dom";
+import ImageWithFallback from "./ImageWithFallback";
 
 const ProductsPage = () => {
   return (
@@ -56,8 +57,8 @@ const ProductsPage = () => {
             {/* Parkett- & Intensivreiniger - clean & green natural */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/clean_green_natural-1-247x296.jpg"
+                <ImageWithFallback
+                  src="/assets/clean_green_natural-1-247x296.jpg"
                   alt="Parkett- & Intensivreiniger"
                   className="object-cover w-full h-full"
                 />
@@ -93,8 +94,8 @@ const ProductsPage = () => {
             {/* Parkett- & Intensivreiniger - clean & green active */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/clean_green_active_407634-1-247x296.jpg"
+                <ImageWithFallback
+                  src="/assets/clean_green_active_407634-1-247x296.jpg"
                   alt="Parkett- & Intensivreiniger"
                   className="object-cover w-full h-full"
                 />
@@ -130,8 +131,8 @@ const ProductsPage = () => {
             {/* WOCA Pflegeöl */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/woca-pflegeoel-247x296.png"
+                <ImageWithFallback
+                  src="/assets/woca-pflegeoel-247x296.png"
                   alt="WOCA Pflegeöl"
                   className="object-cover w-full h-full"
                 />
@@ -163,8 +164,8 @@ const ProductsPage = () => {
             {/* WOCA Holzbodenseife */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/woca-holzbodenseife-ph-neutral-247x296.png"
+                <ImageWithFallback
+                  src="/assets/woca-holzbodenseife-ph-neutral-247x296.png"
                   alt="WOCA Holzbodenseife"
                   className="object-cover w-full h-full"
                 />
@@ -198,8 +199,8 @@ const ProductsPage = () => {
             {/* WOCA Holzbodenseife in Sprühflasche */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/woca-holzbodenseife-spray-natur-247x296.png"
+                <ImageWithFallback
+                  src="/assets/woca-holzbodenseife-spray-natur-247x296.png"
                   alt="WOCA Holzbodenseife in Sprühflasche"
                   className="object-cover w-full h-full"
                 />
@@ -233,8 +234,8 @@ const ProductsPage = () => {
             {/* WOCA Fleckenentferner-Spray */}
             <div className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 rounded-lg">
               <div className="relative h-64">
-                <img
-                  src="/src/assets/woca-fleckenentferner-247x296.jpg"
+                <ImageWithFallback
+                  src="/assets/woca-fleckenentferner-247x296.jpg"
                   alt="WOCA Fleckenentferner-Spray"
                   className="object-cover w-full h-full"
                 />

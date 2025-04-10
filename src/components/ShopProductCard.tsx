@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Check } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 import { toast } from "@/components/ui/use-toast";
+import ImageWithFallback from "./ImageWithFallback";
 
 interface ShopProductCardProps {
   id: string;
@@ -47,7 +48,7 @@ const ShopProductCard = ({
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-white border-2 border-gray-100 h-full flex flex-col">
       <div className="relative">
         <AspectRatio ratio={1 / 1}>
-          <img
+          <ImageWithFallback
             src={imageUrl}
             alt={name}
             className="object-cover w-full h-full"

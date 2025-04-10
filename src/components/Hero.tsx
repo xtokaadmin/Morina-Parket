@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import ImageWithFallback from "./ImageWithFallback";
 
 interface HeroProps {
   title: string;
@@ -90,7 +91,7 @@ const Hero = ({
           transition={{ duration: 0.7 }}
           className={`aspect-square overflow-hidden ${imageOrder}`}
         >
-          <img
+          <ImageWithFallback
             src={imageSrc}
             alt={imageAlt}
             className="w-full h-full object-cover"
