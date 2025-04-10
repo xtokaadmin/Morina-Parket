@@ -1,8 +1,8 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useCartStore } from "@/store/cartStore";
+import Header from "@/layouts/MainLayout/Header";
+import Footer from "@/layouts/MainLayout/Footer";
+import { useCartStore } from "@/features/cart/store/cartStore";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from "lucide-react";

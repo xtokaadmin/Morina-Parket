@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { useCartStore } from "@/store/cartStore";
+import { useCartStore } from "@/features/cart/store/cartStore";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -94,7 +94,6 @@ const CheckoutPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <section className="py-20 bg-[#f8f8f8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

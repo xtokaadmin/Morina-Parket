@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img
-              src={logos.main}
+              src={logos.logo}
               alt="Morina Parkett GmbH Logo"
               className="h-10 md:h-12 transition-transform duration-300 hover:scale-105"
             />
@@ -182,4 +182,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

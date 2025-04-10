@@ -48,9 +48,7 @@ export const useCartStore = create<CartStore>(
           set({ items: items.filter((i) => i.id !== id) });
         } else {
           set({
-            items: items.map((i) =>
-              i.id === item.id ? { ...i, quantity } : i,
-            ),
+            items: items.map((i) => (i.id === id ? { ...i, quantity } : i)),
           });
         }
       },

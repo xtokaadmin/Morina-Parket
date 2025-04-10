@@ -1,7 +1,7 @@
 import React from "react";
 import { ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useCartStore } from "@/store/cartStore";
+import { useCartStore } from "@/features/cart/store/cartStore";
 
 const CartIcon = () => {
   const itemCount = useCartStore((state) => state.items.length);
@@ -18,4 +18,4 @@ const CartIcon = () => {
   );
 };
 
-export default CartIcon; 
+export default CartIcon;

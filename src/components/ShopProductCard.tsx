@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Check } from "lucide-react";
-import { useCartStore } from "@/store/cartStore";
+import { useCartStore } from "@/features/cart/store/cartStore";
 import { toast } from "@/components/ui/use-toast";
 
 // Import product images directly
@@ -31,7 +31,7 @@ const getCorrectImage = (id: string): string => {
   // Map product IDs to their corresponding images
   const imageMap: Record<string, string> = {
     "woca-1": wocaPflegeoel,
-    "woca-2": wocaHolzbodenseifePHNeutral, 
+    "woca-2": wocaHolzbodenseifePHNeutral,
     "woca-3": wocaHolzbodenseifeSpray,
     "woca-4": wocaIntensivreiniger,
     "woca-5": wocaFleckenentferner,
@@ -81,7 +81,8 @@ const ShopProductCard = ({
             className="object-cover w-full h-full"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80";
+              target.src =
+                "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80";
             }}
           />
         </AspectRatio>

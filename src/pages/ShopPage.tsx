@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ShopGrid from "@/features/shop/components/ShopGrid";
 import { allProducts, Product } from "@/data/products";
-import { wocaPflegeoel } from "@/assets";
+import { careProductImages } from "@/assets";
 
 const ShopPage = () => {
   const [filteredProducts, setFilteredProducts] =
@@ -35,11 +35,13 @@ const ShopPage = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl font-bold mb-4">Pflegeprodukte</h1>
-              <p className="text-gray-600 text-lg">Unsere Pflegeprodukte von Woca</p>
+              <p className="text-gray-600 text-lg">
+                Unsere Pflegeprodukte von Woca
+              </p>
             </div>
             <div className="md:w-1/2">
               <img
-                src={wocaPflegeoel}
+                src={careProductImages.hero}
                 alt="Morina Parkett Pflegeprodukte"
                 className="rounded-lg shadow-lg"
               />
