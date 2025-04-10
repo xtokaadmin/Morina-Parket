@@ -62,19 +62,19 @@ const ServicesSection = () => {
     {
       title: "Beraten",
       description:
-        "Professionelle Beratung zur Auswahl der besten Bodenbeläge für Ihre Bedürfnisse. Wir helfen Ihnen, die perfekte Lösung zu finden.",
+        "Kompetente Beratung bei der Auswahl des passenden Bodenbelags. Wir berücksichtigen Ihre individuellen Wünsche, das Raumklima und die Nutzungsanforderungen.",
       icon: <MessageSquare size={32} />,
     },
     {
       title: "Verlegen",
       description:
-        "Fachgerechte Installation aller Arten von Bodenbelägen durch unser erfahrenes Team. Präzise Arbeit für langlebige Ergebnisse.",
+        "Professionelle Verlegung aller Arten von Bodenbelägen durch unser erfahrenes Team. Wir garantieren höchste Qualität und Präzision für langlebige Ergebnisse.",
       icon: <Hammer size={32} />,
     },
     {
       title: "Pflege",
       description:
-        "Umfassende Pflegedienste zur Erhaltung der Schönheit und Langlebigkeit Ihrer Böden. Regelmäßige Wartung für optimale Ergebnisse.",
+        "Fachgerechte Pflege und Reinigung Ihrer Bodenbeläge für eine lange Lebensdauer. Wir bieten hochwertige Pflegeprodukte und professionelle Beratung zur richtigen Pflege.",
       icon: <Paintbrush size={32} />,
     },
   ];
@@ -108,8 +108,8 @@ const ServicesSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-4 text-gray-600 max-w-2xl mx-auto"
           >
-            Wir bieten umfassende Lösungen für alle Ihre Bodenbelagsbedürfnisse,
-            von der ersten Beratung bis zur langfristigen Pflege.
+            Wir begleiten Sie von der ersten Beratung über die fachgerechte
+            Verlegung bis hin zur langfristigen Pflege Ihrer Bodenbeläge.
           </motion.p>
         </motion.div>
 
